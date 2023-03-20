@@ -101,8 +101,10 @@ function lockedProfile() {
                     hidden.style.display = 'none';
                     showBtn.textContent = 'Show more';
                     showBtn.removeEventListener('click', hideFunc);
+
                     showBtn.addEventListener('click', showFunc);
                 }
             });
-        });
+        })
+        .catch(err => console.log(err));
 }
